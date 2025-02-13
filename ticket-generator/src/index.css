@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #041E23;
+    }
+
+    .header {
+        border-color: #0E464F;
+    }
+    .selection_container {
+        border-color: #0E464F;
+    }
+    .step_container {
+        width: 30%;
+        border-bottom: 2px solid #0E464F;
+    }
+    span {
+        border-bottom: 2px solid #24A0B5;
+        bottom: -3%;
+    }
+    .fest_container {
+        border-color: #0E464F;
+        background: #08252B;
+    }
+    .ticket_container{
+        border-color: #0E464F;
+        background: radial-gradient(43.64% 57.39% at 14.02% 32.06%, rgba(36, 160, 181, 0.2)0%,rgba(36, 160, 181, 0)100%), rgba(10, 12, 17, 0.1);
+        backdrop-filter: blur(7px);
+    }
+    .techember_h1 {
+        font-family: "Road Rage", serif;
+    }
+    .line_2 {
+        border-top: 2.5px solid #0E464F;
+        margin-block: 7%;
+    }
+    .access_container,select {
+        border-color: #0E464F;
+    }
+    .access {
+        border-color: #197686;
+    }
+    .access:hover {
+        background: #2C545B;
+    }
+    .access:focus {
+        background: #12464E;
+    }
+    option {
+        background: #041E23;
+    }
+    .btn_1 {
+        border-color: #24A0B5;
+        color: #24A0B5;
+    }
+    .btn_1:hover {
+        background: #24A0B5;
+        color: white;
+    }
+    form {
+        border-color: #0E464F;
+        background: #08252B;
+    }
+    .profile_container {
+        border-color: #0E464F;
+    }
+    .avatar_container {
+        background: #052228;       
+    }
+    .avatar_input {
+        background: #0E464F;
+        border-color: #24A0B5;
+    }
+    .avatar_img {
+      left: 40%;
+    }
+    .span_2 {
+      border-bottom: 2px solid #07373F;
+    }
+    .inputs, textarea {
+      border-color: #07373F;
+    }
+    .btn_2 {
+      display: flex;
+    }
+    .ready_container {
+      width: 45%;
+      height: 73%;
+      border-color: #24A0B5;
+    }
+    .img_upload {
+      border-color: #24A0B5;
+    }
+    .ticket_req {
+      border-color: #133D44;
+    }
+    .mb_input {
+      border-color: #12464E;
+       overflow-y: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: none;
+    }
+
+    @media screen and (max-width: 430px) {
+      .btn_2 {
+        flex-direction: column-reverse;
+        width: 100%;
+      }
+      .avatar_container {
+        background: none;       
+    }
+    .ready_container {
+      width: 85%;
+      left: 7.5%;
+    }
+    }
+}
