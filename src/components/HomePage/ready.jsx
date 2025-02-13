@@ -15,13 +15,20 @@ const ready = () => {
    const downloadTicket = () => {
     if (!ticketRef.current) return;
 
-    html2canvas(ticketRef.current, { scale: 2 }).then((canvas) => {
+    setTimeout(() => {
+    html2canvas(ticketRef.current, { 
+      scale: 2,
+      useCORS: true, // Allows loading external images
+      allowTaint: true, //  Prevents cross-origin issues
+
+     }).then((canvas) => {
       const link = document.createElement("a");
       link.href = canvas.toDataURL("image/png");
       link.download = "Techember_Ticket.png";
       link.click();
     });
-  };
+  }, 3000);  //Waits 3 second for images to load
+  }
 
   return (
     <div>
@@ -49,7 +56,7 @@ const ready = () => {
             <p className='absolute top-16 text-gray-300 text-sm left-9'>📆 March 15,2025 | 7:00pm</p>
             
             {/* Handles imnage uplaoad */}
-            <img src={attendeeDetails?.avatar} alt="Avatar" className='img_upload w-1/2 h-1/4 border-4 rounded-2xl absolute top-28 left-16' />
+            <img src={attendeeDetails?.avatar} alt="Avatar" crossOrigin="anonymous"  className='img_upload w-1/2 h-1/4 border-4 rounded-2xl absolute top-28 left-16' />
 
             <div className='ticket_req w-11/12 border absolute top-60 left-3 p-1 rounded-xl'>
                 <div className='mb_input flex gap-1 border-b-2'>
@@ -87,7 +94,7 @@ const ready = () => {
             </div>
             {/* QR Code */}
             <div id="qrCode" className="absolute bottom-5 left-10 md:left-44">
-                    <img src={QrCode} alt="" />
+                    <img src={QrCode} alt="QR Code" crossOrigin="anonymous" />
                 </div>
         </div>
 
