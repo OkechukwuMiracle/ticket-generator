@@ -90,7 +90,7 @@ const uploadImage = async (file) => {
       setFormData((prev) => ({ ...prev, avatar: data.secure_url }));
   } catch (error) {
       console.error("File upload error:", error);
-      alert("Failed to upload image. Try again.");
+      alert("Failed to upload image. Try again!.");
   }
 };
 
